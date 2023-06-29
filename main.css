@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./palace.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card-img{
+    background: url(./banquet-table-with-snacks_144627-18361.webp) center/cover no-repeat;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-content{
+    background: #fff;
+    height: 330px;
+}
+.card-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #9a9a9a;
+}
+form input[type = submit]{
+    color: #fff;
+    background: #27ae60;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    opacity: 0.9;
+    background: rgb(232, 235, 231);
+    color: #000;
+
+}
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
+@media (max-width:964px) {
+    header .menu {
+        display: none;
+    }
+    header {
+        padding: 0 20px;
+    }
+    #home {
+        flex-direction: column;
+        padding: 12px;
+        height: fit-content;
+
+    }
+    #home .left , #home .right  {
+        width: 100%;
+        padding: 0;
+    }
+    #home .left {
+        margin: 100px 0;
+    }
+    #home .left h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #home .left h4 {
+        font-size: 15px;
+    }
+    #home .left p {
+        font-size: 15px;
+    }
+    #menu .dishes .dish {
+        width: 100%;
+        max-width: 260px;
+    }
+    #about_us {
+        padding: 10px ;
+        height: auto;
+    }
+    #about_us .about {
+        flex-direction: column;
+       height: fit-content;
+    }
+    #about_us .left , #about_us .right {
+        width: 100%;
+    }
+    #about_us .left {
+        height: fit-content;
+    }
+    #about_us .left img {
+        width: 50%;
+    }
+    #about_us .right {
+        text-align: center;
+        padding: 20px;
+    }
+    .comment_section {
+        height: auto;
+    }
+    .comment_section .comments  .comment{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .services_list .service {
+        padding: 0 50px;
+    }
+    .toggle_menu {
+        display: flex;
+        height: 40px;
+        width: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         cursor: pointer;
+    }
+    .toggle_menu::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color:  rgb(0, 174, 255) ;
+        border-radius: 6px;
+        box-shadow: 0 10px 0  rgb(0, 174, 255);
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .toggle_menu.active::before {
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0  rgb(0, 174, 255);
+    }
+    .toggle_menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color:  rgb(0, 174, 255);
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .toggle_menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+      
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        flex-direction: column;
+    }
+    header .menu.responsive li {
+        margin: 15px 0;
+    }
+
+}
